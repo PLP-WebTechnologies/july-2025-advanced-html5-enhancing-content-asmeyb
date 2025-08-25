@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page with Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, section, form {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul, ol {
+            margin: 10px 0 20px 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .media-container {
+            text-align: center;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        form {
+            background-color: #f9f9f9;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-field {
+            flex: 1 1 45%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>A Showcase of Web Content</h1>
+        <p>This page demonstrates the use of lists, tables, and media, followed by a complete HTML5 form with built-in validation.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ordered and Unordered Lists</h2>
+            <p>Here is an unordered list of my favorite fruits:</p>
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Oranges</li>
+                <li>Grapes</li>
+            </ul>
+            <p>And here is an ordered list of steps to make coffee:</p>
+            <ol>
+                <li>Boil water.</li>
+                <li>Grind coffee beans.</li>
+                <li>Pour hot water over the grounds.</li>
+                <li>Enjoy your coffee.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Monthly Budget Breakdown</h2>
+            <p>This table shows a simple breakdown of a monthly budget for a fictional person.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount ($)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rent</td>
+                        <td>800</td>
+                        <td>Due on the 1st</td>
+                    </tr>
+                    <tr>
+                        <td>Groceries</td>
+                        <td>300</td>
+                        <td>Includes food and household items</td>
+                    </tr>
+                    <tr>
+                        <td>Utilities</td>
+                        <td>150</td>
+                        <td>Electricity, water, and internet</td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>100</td>
+                        <td>Bus pass</td>
+                    </tr>
+                    <tr>
+                        <td>Savings</td>
+                        <td>250</td>
+                        <td>Goal of 15% of income</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>1600</strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section class="media-container">
+            <h2>Image and Video Content</h2>
+            <p>An example image of a scenic landscape.</p>
+            <img src="https://via.placeholder.com/800x450.png?text=Placeholder+Image" alt="A beautiful scenic landscape">
+            <p>An example video from an external source.</p>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>Contact and Registration Form</h2>
+            <p>Please fill out this form to register for our newsletter and events. All required fields are marked with an asterisk (*).</p>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="full_name">Full Name*</label>
+                            <input type="text" id="full_name" name="full_name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required placeholder="johndoe@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g., 123-456-7890">
+                            <small>Format: 123-456-7890</small>
+                        </div>
+                        <div class="form-field">
+                            <label for="password">Password*</label>
+                            <input type="password" id="password" name="password" required minlength="8" placeholder="Must be at least 8 characters">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event Registration</legend>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="event_date">Preferred Event Date</label>
+                            <input type="date" id="event_date" name="event_date">
+                        </div>
+                        <div class="form-field">
+                            <label for="guests">Number of Guests (1-10)*</label>
+                            <input type="number" id="guests" name="guests" required min="1" max="10" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="event_type">Select Event Type*</label>
+                        <select id="event_type" name="event_type" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="conference">Conference</option>
+                            <option value="webinar">Webinar</option>
+                            <option value="workshop">Workshop</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label>Preferred Contact Method*</label>
+                        <div>
+                            <input type="radio" id="contact_email" name="contact_method" value="email" required>
+                            <label for="contact_email">Email</label>
+                            <input type="radio" id="contact_phone" name="contact_method" value="phone">
+                            <label for="contact_phone">Phone</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <div class="form-field">
+                        <label for="bio">Tell Us About Yourself</label>
+                        <textarea id="bio" name="bio" rows="4" placeholder="Briefly describe your interests..."></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Subscribe to our newsletter</label>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="read_only">Read-Only Field</label>
+                        <input type="text" id="read_only" name="read_only" value="This field cannot be edited." readonly>
+                    </div>
+                </fieldset>
+                
+                <input type="submit" value="Submit Registration">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Page Demo</p>
+    </footer>
+
+</body>
+</html>
